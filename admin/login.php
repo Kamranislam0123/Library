@@ -1,18 +1,19 @@
 <?php
 require_once '../dbcon.php';
+session_start();
+if(isset ($_SESSION['librarian_login'])){
+    header('location:index.php');
+}
 if (isset($_POST['login'])){
     $email=$_POST['email'];
     $password=$_POST['password'];
-    $result=mysqli_query($con, query:"SELECT * FROM `students` WHERE `email`='$email' OR `username`='$email';");
+    $result=mysqli_query($con, query:"SELECT * FROM `librarian` WHERE `email`='$email' OR `username`='$email';");
    
        if(mysqli_num_rows($result)==1){
         $row = mysqli_fetch_assoc($result);
-        if (password_verify($password,$row['password'])){
-            if ($row['status']==1){
-                echo "yes";
-            } else{
-                $error="Your Status inactive";
-            }
+        if ($row['password']==$password){
+            $_SESSION['librarian_login']=$email;
+           header('location:index.php');
         } else{
             $error="password Invalid";
         }
@@ -54,7 +55,7 @@ if (isset($_POST['login'])){
     <div class="page-body animated slideInDown">
         <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
         <!--LOGO-->
-        <h2 class="text-center" > Library Sign In </h2>
+        <h2 class="text-center" > Library log In </h2>
         <?php
         if (isset($error)){ 
         ?>
@@ -97,8 +98,7 @@ if (isset($_POST['login'])){
                         <div class="form-group text-center">
                             <a href="pages_forgot-password.html">Forgot password?</a>
                             <hr/>
-                             <span>Don't have an account?</span>
-                            <a href="register.php" class="btn btn-block mt-sm">Register</a>
+                            
                         </div>
                     </form>
                 </div>

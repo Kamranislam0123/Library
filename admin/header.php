@@ -3,8 +3,8 @@ $page=explode('/',$_SERVER['PHP_SELF']);
 $page=end($page);
 
 session_start();
-if(!isset ($_SESSION['student_login'])){
-    header('location:sign-in.php');
+if(!isset ($_SESSION['librarian_login'])){
+    header('location:login.php');
 }
 ?>
 
