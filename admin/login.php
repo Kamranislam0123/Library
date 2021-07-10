@@ -55,7 +55,7 @@ if (isset($_POST['login'])){
     <div class="page-body animated slideInDown">
         <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
         <!--LOGO-->
-        <h2 class="text-center" > Library log In </h2>
+        <h2 class="text-center" > Library Admin log In </h2>
         <?php
         if (isset($error)){ 
         ?>
