@@ -1,6 +1,7 @@
 <?php
 $page=explode('/',$_SERVER['PHP_SELF']);
 $page=end($page);
+require_once '../dbcon.php';
 
 session_start();
 if(!isset ($_SESSION['librarian_login'])){
@@ -32,6 +33,8 @@ if(!isset ($_SESSION['librarian_login'])){
     <link rel="stylesheet" href="../asset/vendor/toastr/toastr.min.css">
     <!--Magnific popup-->
     <link rel="stylesheet" href="../asset/vendor/magnific-popup/magnific-popup.css">
+    <!--dataTable-->
+    <link rel="stylesheet" href="../asset/vendor/data-table/media/css/dataTables.bootstrap.min.css">
     <!--TEMPLATE css-->
     <!-- ========================================================= -->
     <link rel="stylesheet" href="../asset/stylesheets/css/style.css">
@@ -185,9 +188,15 @@ if(!isset ($_SESSION['librarian_login'])){
                             <ul class="nav nav-left-lines" id="main-nav">
                                 <!--HOME-->
                                 <li class="<?=$page == 'index.php'? 'active-item':''?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
-                                <li class="<?=$page == 'test.php'? 'active-item':''?>"><a href="test.php"><i class="fa fa-bars" aria-hidden="true"></i><span>test</span></a></li>
+                                <li class="<?=$page == 'students.php'? 'active-item':''?>"><a href="students.php"><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
                                 <!--UI ELEMENTENTS-->
-                            
+                                <li class="has-child-item close-item">
+                                    <a><i class="fa fa-book" aria-hidden="true"></i><span>Books</span></a>
+                                    <ul class="nav child-nav level-1" style="">
+                                        <li><a href="add-books.php">Add Books</a></li>
+                                        <li><a href="manage-book.php">Manage Books</a></li>
+                                       
+                                </li>
 
                             </ul>
                         </nav>

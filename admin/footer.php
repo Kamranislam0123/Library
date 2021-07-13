@@ -20,6 +20,11 @@
     <script src="../asset/vendor/chart-js/chart.min.js"></script>
     <!--Gallery with Magnific popup-->
     <script src="../asset/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!--dataTable-->
+<script src="../asset/vendor/data-table/media/js/jquery.dataTables.min.js"></script>
+<script src="../asset/vendor/data-table/media/js/dataTables.bootstrap.min.js"></script>
+<!--Examples-->
+<script src="../asset/javascripts/examples/tables/data-tables.js"></script>
     <!--Examples-->
     <script src="../asset/javascripts/examples/dashboard.js"></script>
 </body>
