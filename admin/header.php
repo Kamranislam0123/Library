@@ -144,7 +144,7 @@ if(!isset ($_SESSION['librarian_login'])){
                             <img alt="profile photo" src="../asset/images/avatar/avatar_user.jpg" />
                         </div>
                         <div class="user-info">
-                            <span class="user-name">Jane Doe</span>
+                            <span class="user-name">Kamran</span>
                             <span class="user-profile">Admin</span>
                         </div>
                         <i class="fa fa-plus icon-open" aria-hidden="true"></i>
