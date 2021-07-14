@@ -13,6 +13,7 @@ if (isset($_POST['login'])){
         $row = mysqli_fetch_assoc($result);
         if ($row['password']==$password){
             $_SESSION['librarian_login']=$email;
+            $_SESSION['librarian_username']=$row['username'];
            header('location:index.php');
         } else{
             $error="password Invalid";
