@@ -13,9 +13,10 @@
 <br>
 <div class="container">
 <div class="row" >
-		<div class="col-sm-4"></div>
-	<a class ="btn btn-primary btn-block" href="viewer"> viewer</a>
+		<div class="col-sm-4 col-sm-offset-4">
+	<a class ="btn btn-primary btn-block" href="viewer"> Student</a>
 	<a class ="btn btn-primary btn-block" href="admin"> admin</a>
+	</div>
 	</div>
 </div>
 </div>

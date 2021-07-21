@@ -138,10 +138,10 @@ if(!isset ($_SESSION['student_login'])){
                 <div class="header-section" id="user-headerbox">
                     <div class="user-header-wrap">
                         <div class="user-photo">
-                            <img alt="profile photo" src="../asset/images/avatar/avatar_user.jpg" />
+                            <img alt="profile photo" src="../asset/images/avatar/G 2 90917 - copy.jpg" />
                         </div>
                         <div class="user-info">
-                            <span class="user-name">Jane Doe</span>
+                            <span class="user-name">Kamran</span>
                             <span class="user-profile">Admin</span>
                         </div>
                         <i class="fa fa-plus icon-open" aria-hidden="true"></i>

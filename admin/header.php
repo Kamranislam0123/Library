@@ -141,7 +141,7 @@ if(!isset ($_SESSION['librarian_login'])){
                 <div class="header-section" id="user-headerbox">
                     <div class="user-header-wrap">
                         <div class="user-photo">
-                            <img alt="profile photo" src="../asset/images/avatar/avatar_user.jpg" />
+                            <img alt="profile photo" src="../asset/images/avatar/G 2 90917 - copy.jpg" />
                         </div>
                         <div class="user-info">
                             <span class="user-name">Kamran</span>

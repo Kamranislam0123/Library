@@ -738,6 +738,7 @@ html.right-sidebar-opened .right-sidebar {
 
 .content .content-header .leftside-content-header {
   padding-left: 20px;
+  
 }
 
 .content .content-header .rightside-content-header {
@@ -4035,6 +4036,9 @@ ul.user-contact-info > li:last-child {
 
 .mb-lg {
   margin-bottom: 20px !important;
+  text-transform: uppercase;
+  
+
 }
 
 .mb-xl {
