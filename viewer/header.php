@@ -1,9 +1,9 @@
 <?php
-$page=explode('/',$_SERVER['PHP_SELF']);
-$page=end($page);
+$page = explode('/', $_SERVER['PHP_SELF']);
+$page = end($page);
 
 session_start();
-if(!isset ($_SESSION['student_login'])){
+if (!isset($_SESSION['student_login'])) {
     header('location:sign-in.php');
 }
 ?>
@@ -13,6 +13,7 @@ if(!isset ($_SESSION['student_login'])){
 
 
 <!-- Mirrored from myiideveloper.com/helsinki/last-version/helsinki_green-dark/src/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Mar 2019 13:03:33 GMT -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -58,12 +59,12 @@ if(!isset ($_SESSION['student_login'])){
             <!-- RIGHTSIDE header -->
             <div class="rightside-header">
                 <div class="header-middle"></div>
-                
+
                 <!--NOCITE HEADERBOX-->
-                
-              <div class="header-section hidden-xs" id="notice-headerbox">
+
+                <div class="header-section hidden-xs" id="notice-headerbox">
                     <!--check list-->
-                    
+
                     <!--messages-->
 
                     <!--alerts notices-->
@@ -133,7 +134,7 @@ if(!isset ($_SESSION['student_login'])){
                         </div>
                     </div>
                     <div class="header-separator"></div>
-                </div> 
+                </div>
                 <!--USER HEADERBOX -->
                 <div class="header-section" id="user-headerbox">
                     <div class="user-header-wrap">
@@ -184,10 +185,10 @@ if(!isset ($_SESSION['student_login'])){
                         <nav>
                             <ul class="nav nav-left-lines" id="main-nav">
                                 <!--HOME-->
-                                <li class="<?=$page == 'index.php'? 'active-item':''?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
-                                <li class="<?=$page == 'test.php'? 'active-item':''?>"><a href="test.php"><i class="fa fa-bars" aria-hidden="true"></i><span>test</span></a></li>
+                                <li class="<?= $page == 'index.php' ? 'active-item' : '' ?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
+                                <li class="<?= $page == 'books.php' ? 'active-item' : '' ?>"><a href="books.php"><i class="fa fa-book" aria-hidden="true"></i><span>Books</span></a></li>
                                 <!--UI ELEMENTENTS-->
-                            
+
 
                             </ul>
                         </nav>

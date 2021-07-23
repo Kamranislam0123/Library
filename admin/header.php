@@ -1,10 +1,10 @@
 <?php
-$page=explode('/',$_SERVER['PHP_SELF']);
-$page=end($page);
+$page = explode('/', $_SERVER['PHP_SELF']);
+$page = end($page);
 require_once '../dbcon.php';
 
 session_start();
-if(!isset ($_SESSION['librarian_login'])){
+if (!isset($_SESSION['librarian_login'])) {
     header('location:login.php');
 }
 ?>
@@ -14,6 +14,7 @@ if(!isset ($_SESSION['librarian_login'])){
 
 
 <!-- Mirrored from myiideveloper.com/helsinki/last-version/helsinki_green-dark/src/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Mar 2019 13:03:33 GMT -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -61,12 +62,12 @@ if(!isset ($_SESSION['librarian_login'])){
             <!-- RIGHTSIDE header -->
             <div class="rightside-header">
                 <div class="header-middle"></div>
-                
+
                 <!--NOCITE HEADERBOX-->
-                
-              <div class="header-section hidden-xs" id="notice-headerbox">
+
+                <div class="header-section hidden-xs" id="notice-headerbox">
                     <!--check list-->
-                    
+
                     <!--messages-->
 
                     <!--alerts notices-->
@@ -84,7 +85,8 @@ if(!isset ($_SESSION['librarian_login'])){
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <div class="left-element"><i class="fa fa-warning color-warning"></i></div>
+                                                <div class="left-element"><i class="fa fa-warning color-warning"></i>
+                                                </div>
                                                 <div class="text">
                                                     <span class="title">8 Bugs</span>
                                                     <span class="subtitle">reported today</span>
@@ -111,7 +113,8 @@ if(!isset ($_SESSION['librarian_login'])){
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <div class="left-element"><i class="fa fa-tasks color-success"></i></div>
+                                                <div class="left-element"><i class="fa fa-tasks color-success"></i>
+                                                </div>
                                                 <div class="text">
                                                     <span class="title">14 Task</span>
                                                     <span class="subtitle">completed</span>
@@ -120,7 +123,8 @@ if(!isset ($_SESSION['librarian_login'])){
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <div class="left-element"><i class="fa fa-envelope color-primary"></i></div>
+                                                <div class="left-element"><i class="fa fa-envelope color-primary"></i>
+                                                </div>
                                                 <div class="text">
                                                     <span class="title">21 Menssage</span>
                                                     <span class="subtitle"> (see more)</span>
@@ -136,7 +140,7 @@ if(!isset ($_SESSION['librarian_login'])){
                         </div>
                     </div>
                     <div class="header-separator"></div>
-                </div> 
+                </div>
                 <!--USER HEADERBOX -->
                 <div class="header-section" id="user-headerbox">
                     <div class="user-header-wrap">
@@ -154,7 +158,8 @@ if(!isset ($_SESSION['librarian_login'])){
                         <div class="drop-content basic">
                             <ul>
                                 <li> <a href=""><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
-                                <li> <a href="pages_lock-screen.html"><i class="fa fa-lock" aria-hidden="true"></i> Lock Screen</a></li>
+                                <li> <a href="pages_lock-screen.html"><i class="fa fa-lock" aria-hidden="true"></i> Lock
+                                        Screen</a></li>
                                 <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Configurations</a></li>
                             </ul>
                         </div>
@@ -187,15 +192,15 @@ if(!isset ($_SESSION['librarian_login'])){
                         <nav>
                             <ul class="nav nav-left-lines" id="main-nav">
                                 <!--HOME-->
-                                <li class="<?=$page == 'index.php'? 'active-item':''?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
-                                <li class="<?=$page == 'students.php'? 'active-item':''?>"><a href="students.php"><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
+                                <li class="<?= $page == 'index.php' ? 'active-item' : '' ?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
+                                <li class="<?= $page == 'students.php' ? 'active-item' : '' ?>"><a href="students.php"><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
                                 <!--UI ELEMENTENTS-->
-                                <li class="has-child-item close-item <?=$page == 'manage-book.php'? 'open-item':''?><?=$page == 'add-books.php'? 'open-item':''?>">
+                                <li class="has-child-item close-item <?= $page == 'manage-book.php' ? 'open-item' : '' ?><?= $page == 'add-books.php' ? 'open-item' : '' ?>">
                                     <a><i class="fa fa-book" aria-hidden="true"></i><span>Books</span></a>
                                     <ul class="nav child-nav level-1" style="">
-                                        <li class="<?=$page == 'add-books.php'? 'active-item':''?>"><a href="add-books.php">Add Books</a></li>
-                                        <li class="<?=$page == 'manage-book.php'? 'active-item':''?>"><a href="manage-book.php">Manage Books</a></li>
-                                       
+                                        <li class="<?= $page == 'add-books.php' ? 'active-item' : '' ?>"><a href="add-books.php">Add Books</a></li>
+                                        <li class="<?= $page == 'manage-book.php' ? 'active-item' : '' ?>"><a href="manage-book.php">Manage Books</a></li>
+
                                 </li>
 
                             </ul>
