@@ -13,7 +13,9 @@ require_once './header.php';
 </div>
 <div class="row animated fadeInUp">
     <div class="col-sm-12">
-        test
+        Please Go To Books Menu 
+        <br>
+         There You can Search Book
     </div>
 </div>
 

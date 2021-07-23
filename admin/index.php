@@ -13,7 +13,7 @@ require_once './header.php';
 </div>
 <div class="row animated fadeInUp">
     <div class="col-sm-12">
-        test
+        Please Cheak Menu Option
     </div>
 </div>
 
