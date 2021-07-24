@@ -35,35 +35,34 @@ require_once 'header.php';
 
     <?php
     if (isset($_POST['books'])) {
-        $result=$_POST['result'];
-        ?>
+        $result = $_POST['result'];
+    ?>
         <div class="col-sm-12">
             <div class="panel">
                 <div class="panel-content">
                     <div class="row">
                         <?php
                         $result = mysqli_query($con, query: "SELECT * FROM `books` WHERE `book_name` LIKE '%$result%' ");
-                        $temp=mysqli_num_rows($result);
-                        if($temp > 0){ ?>
-                        <?php
-                         while ($row = mysqli_fetch_assoc($result)) { ?>
-                            <div class=" col-sm-3 col-sm-md-2">
-                                <img style="width: 100%; height: 140%;" src="../images/books/<?=$row['book_image']?>">
-                                <p><?= $row['book_name'] ?></p>
-                                <span><b> Book Quantity : <?= $row['book_qty'] ?></b></span>
-                            </div>
-                        <?php } ?>
+                        $temp = mysqli_num_rows($result);
+                        if ($temp > 0) { ?>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($result)) { ?>
+                                <div class=" col-sm-3 col-sm-md-2">
+                                    <img style="width: 100%; height: 140%;" src="../images/books/<?= $row['book_image'] ?>">
+                                    <p><?= $row['book_name'] ?></p>
+                                    <span><b> Book Quantity : <?= $row['book_qty'] ?></b></span>
+                                </div>
+                            <?php } ?>
                         <?php } else {
                             echo "<h2> No Books Found by this Name ! </h2>";
-                            
-                        }?>
-                        
+                        } ?>
+
                     </div>
                 </div>
             </div>
         </div>
-        <?php
-    } else {?>
+    <?php
+    } else { ?>
         <div class="col-sm-12">
             <div class="panel">
                 <div class="panel-content">
@@ -72,7 +71,7 @@ require_once 'header.php';
                         $result = mysqli_query($con, query: "SELECT * FROM `books` ");
                         while ($row = mysqli_fetch_assoc($result)) { ?>
                             <div class=" col-sm-3 col-sm-md-2">
-                                <img style="width: 100%; height: 140%;" src="../images/books/<?=$row['book_image']?>">
+                                <img style="width: 100%; height: 140%;" src="../images/books/<?= $row['book_image'] ?>">
                                 <p><?= $row['book_name'] ?></p>
                                 <span><b> Book Quantity : <?= $row['book_qty'] ?></b></span>
                             </div>

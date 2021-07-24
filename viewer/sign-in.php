@@ -1,7 +1,7 @@
 <?php
 require_once '../dbcon.php';
 session_start();
-if(isset ($_SESSION['student_login'])){
+if (isset($_SESSION['student_login'])) {
     header('location:index.php');
 }
 if (isset($_POST['login'])){

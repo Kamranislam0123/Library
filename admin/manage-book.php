@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require_once './header.php';
 ?>
 <!-- content HEADER -->
@@ -199,8 +200,9 @@ if (isset($_POST['update-book'])) {
 
 
     if ($result) {
+        header('location:manage-book.php');
         $result = mysqli_query($con, query: "UPDATE `books` SET `book_name`='$book_name',`book_author_name`=' $book_author_name
-',`book_publication_name`='$book_publication_name',`book_price`=' $book_price',`book_qty`='$book_qty',`librarian_username`='',`datetime`='' WHERE `id`='$id'");
+',`book_publication_name`='$book_publication_name',`book_price`='$book_price',`book_qty`='$book_qty',`librarian_username`='',`datetime`='' WHERE `id`='$id'");
     }
 }
 ?>
