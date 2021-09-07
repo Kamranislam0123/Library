@@ -7,6 +7,9 @@ session_start();
 if (!isset($_SESSION['librarian_login'])) {
     header('location:login.php');
 }
+$librarian_login=$_SESSION['librarian_login'];
+$data=mysqli_query($con, query: "SELECT *FROM `librarian` WHERE `email`= '$librarian_login'");
+$librarian_info=mysqli_fetch_assoc($data);
 ?>
 
 <!doctype html>
@@ -148,7 +151,7 @@ if (!isset($_SESSION['librarian_login'])) {
                             <img alt="profile photo" src="../asset/images/avatar/G 2 90917 - copy.jpg" />
                         </div>
                         <div class="user-info">
-                            <span class="user-name">Kamran</span>
+                            <span class="user-name"><?=$librarian_info['firstname']?></span>
                             <span class="user-profile">Admin</span>
                         </div>
                         <i class="fa fa-plus icon-open" aria-hidden="true"></i>
